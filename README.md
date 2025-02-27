@@ -91,4 +91,4 @@ This project is licensed under the [MIT License](LICENSE).
 For inquiries, reach out via [your.email@example.com](mailto:your.email@example.com).
 
 ---
-Developed with ❤️ by [@CHANTHEA22](https://github.com/CHANTHEA22)
+Developed with ❤️ by auto pilots
