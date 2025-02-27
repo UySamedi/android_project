@@ -1,23 +1,21 @@
 # University Erollo App
 
-University Erollo is a Laravel-based application designed for university enrollment and management. It provides an admin dashboard, RESTful API, and various user roles to streamline operations.
+University Erollo is an Android-based application designed for university enrollment and management. It provides an intuitive UI, secure authentication, and seamless user experience for students and administrators.
 
 ## 📌 Features
 
-- **Admin Dashboard**: Manage products, categories, orders, and users efficiently.
-- **Laravel & Livewire**: Uses Laravel's backend with Livewire for reactive UI.
-- **RESTful API**: Enables external integrations and user interactions.
-- **Role-Based Access**: Supports different API roles (Admin, Doctor, User).
-- **Secure Authentication**: Uses Laravel Sanctum for API authentication.
+- **Student Enrollment**: Easily register and enroll in university courses.
+- **Admin Dashboard**: Manage users, courses, and university data efficiently.
+- **RESTful API Integration**: Connect with backend services for real-time updates.
+- **Role-Based Access**: Different roles for students, professors, and admins.
+- **Secure Authentication**: Uses Firebase Authentication for login and authorization.
 
 ## 🚀 Installation
 
 ### Prerequisites
 Ensure you have the following installed:
-- PHP 8.1+
-- Composer
-- MySQL
-- Node.js & npm (for frontend dependencies, if applicable)
+- Android Studio (Latest Version)
+- Java Development Kit
 
 ### Steps to Install
 
@@ -26,46 +24,34 @@ Ensure you have the following installed:
    git clone https://github.com/CHANTHEA22/vcs_api.git
    cd vcs_api
    ```
-2. **Install Laravel dependencies**:
-   ```bash
-   composer install
-   ```
-3. **Copy and configure environment file**:
-   ```bash
-   cp .env.example .env
-   ```
-4. **Generate application key**:
-   ```bash
-   php artisan key:generate
-   ```
-5. **Set up database**:
-   - Update `.env` file with your database credentials.
-   - Run migrations and seed data:
-     ```bash
-     php artisan migrate --seed
-     ```
-6. **Start the development server**:
-   ```bash
-   php artisan serve
-   ```
+2. **Open the project in Android Studio**:
+   - Click on `Open an existing project` and select the cloned folder.
+3. **Sync Gradle dependencies**:
+   - Wait for Gradle to download and set up dependencies.
+4. **Configure API Keys & Firebase**:
+   - Update `google-services.json` with Firebase credentials.
+   - Ensure backend API URLs are correctly configured in `Constants.java`.
+5. **Run the application**:
+   - Select an emulator or physical device and click `Run`.
 
 ## 📊 Feature Table
 
-| Feature         | Admin API  | API Doctor  | API User  |
-| -------------- | ----------- | -------- | ---------- |
-| Dashboard       | 🔜 Coming Soon | ✔️ Yes | 🔜 Coming Soon |
-| Search          | ❌ No        | ✔️ Done | ❌ No       |
-| Users          | ✔️ Done      | ❌ Bug    | 🔜 Coming Soon |
-| User Addresses  | 🔜 Coming Soon | ✔️ Yes  | ❌ No       |
-| Categories      | ✔️ Done      | ❌ No    | 🔜 Coming Soon |
-| Products        | ✔️ Done      | ✔️ Yes   | 🔜 Coming Soon |
-| Orders         | ❌ No        | ❌ No    | ❌ No       |
-| Profile        | 🔜 Coming Soon | ✔️ Done | ❌ No       |
+| Feature         | Student | Professor | Admin |
+| -------------- | -------- | -------- | ---------- |
+| Dashboard       | ✔️ Yes | ✔️ Yes | ✔️ Yes |
+| Course Enrollment | ✔️ Yes | ❌ No | ❌ No |
+| User Management | ❌ No | ❌ No | ✔️ Yes |
+| Notifications  | ✔️ Yes | ✔️ Yes | ✔️ Yes |
+| Profile Management | ✔️ Yes | ✔️ Yes | ✔️ Yes |
 
 ## 🛠 Running Tests
-To run tests, use the following command:
+To run unit tests, use:
 ```bash
-php artisan test
+./gradlew test
+```
+To run UI tests, use:
+```bash
+./gradlew connectedAndroidTest
 ```
 
 ## 🌱 Branch Management
@@ -74,21 +60,21 @@ php artisan test
 |----------|---------|
 | `local`  | Default branch for local development |
 | `dev`    | Development and testing branch |
-| `stage`  | Used for unit tests and PHP testing |
+| `stage`  | Used for testing before release |
 | `prod`   | Production branch with CI/CD pipeline |
 
 ## 📂 Branch Naming Conventions
 
 | Feature Branch | Version | Start Date | Completion Date |
 |---------------|---------|------------|-----------------|
-| Create & Read | v1.0.0  | Feb 20, 2025 | [Enter Date] |
-| Update & Delete | v2.0.0 | [Start Date] | [Enter Date] |
+| UI Development | v1.0.0  | Feb 20, 2025 | [Enter Date] |
+| API Integration | v2.0.0 | [Start Date] | [Enter Date] |
 | Security & Bug Fixes | v1.0.0 | [Start Date] | [Enter Date] |
 
 ## 🚀 Deployment Guide
-This project supports CI/CD for automated deployment. To deploy, follow these steps:
+This project supports CI/CD for automated deployment. To deploy:
 1. Push changes to the `prod` branch.
-2. The CI/CD pipeline will handle deployment.
+2. The CI/CD pipeline will handle the build and deployment.
 3. Monitor logs for any issues.
 
 ## 🤝 Contribution Guidelines
