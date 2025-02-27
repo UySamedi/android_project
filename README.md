@@ -1,37 +1,55 @@
-# # VCS RESTful API with Laravel & MySQL
+# University Erollo App
 
-## Installation Steps
+University Erollo is a Laravel-based application designed for university enrollment and management. It provides an admin dashboard, RESTful API, and various user roles to streamline operations.
 
-### Laravel Installation
+## 📌 Features
 
-1. **Clone the project repository:**
+- **Admin Dashboard**: Manage products, categories, orders, and users efficiently.
+- **Laravel & Livewire**: Uses Laravel's backend with Livewire for reactive UI.
+- **RESTful API**: Enables external integrations and user interactions.
+- **Role-Based Access**: Supports different API roles (Admin, Doctor, User).
+- **Secure Authentication**: Uses Laravel Sanctum for API authentication.
+
+## 🚀 Installation
+
+### Prerequisites
+Ensure you have the following installed:
+- PHP 8.1+
+- Composer
+- MySQL
+- Node.js & npm (for frontend dependencies, if applicable)
+
+### Steps to Install
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/CHANTHEA22/vcs_api.git
+   cd vcs_api
    ```
-2. **Install Laravel dependencies:**
-    ```bash
-    composer install
-    ```
-3. **Create a copy of the `.env` file:**
-    ```bash
-    cp .env.example .env
-    ```
-4. **Generate an application key:**
-    ```bash
-    php artisan key:generate
-    ```
-5. **Run database migrations and seed data (if needed):**
-    ```bash
-    php artisan migrate --seed
-    ```
+2. **Install Laravel dependencies**:
+   ```bash
+   composer install
+   ```
+3. **Copy and configure environment file**:
+   ```bash
+   cp .env.example .env
+   ```
+4. **Generate application key**:
+   ```bash
+   php artisan key:generate
+   ```
+5. **Set up database**:
+   - Update `.env` file with your database credentials.
+   - Run migrations and seed data:
+     ```bash
+     php artisan migrate --seed
+     ```
+6. **Start the development server**:
+   ```bash
+   php artisan serve
+   ```
 
-## Features
-
-- **Admin Dashboard:** Manage products, categories, orders, and customers seamlessly.
-- **Laravel & Livewire:** Leverage the power of Laravel's backend with Livewire for reactive UI.
-- **RESTful API:** Enables external integrations and interactions with the platform.
-
-## Feature Table
+## 📊 Feature Table
 
 | Feature         | Admin API  | API Doctor  | API User  |
 | -------------- | ----------- | -------- | ---------- |
@@ -44,21 +62,47 @@
 | Orders         | ❌ No        | ❌ No    | ❌ No       |
 | Profile        | 🔜 Coming Soon | ✔️ Done | ❌ No       |
 
-## Running Tests
-Run tests using the following command:
+## 🛠 Running Tests
+To run tests, use the following command:
 ```bash
 php artisan test
 ```
 
-## Branch Management
-- `local` - Default branch for local development.
-- `dev` - Used for development and testing.
-- `stage` - Used for unit tests and PHP testing.
-- `prod` - Production branch for deployment via CI/CD pipeline.
+## 🌱 Branch Management
 
-## Branch Naming Conventions
-|       Feature Branch      |       Version     |       Start Date      |       Completion Date     |
-|---------------------------|-------------------|-----------------------|---------------------------|
-|   Create and Read	        |   Version 1.0.0	|  Feb 20, 2025     |	[Enter Date]            |
-|   Update and Delete	        |   Version 2.0.0	|  [Start Date]     |	[Enter Date]            |
-|   Security and Bug	        |   Version 1.0.0	|  [Start Date]    |	[Enter Date]            |
+| Branch   | Purpose |
+|----------|---------|
+| `local`  | Default branch for local development |
+| `dev`    | Development and testing branch |
+| `stage`  | Used for unit tests and PHP testing |
+| `prod`   | Production branch with CI/CD pipeline |
+
+## 📂 Branch Naming Conventions
+
+| Feature Branch | Version | Start Date | Completion Date |
+|---------------|---------|------------|-----------------|
+| Create & Read | v1.0.0  | Feb 20, 2025 | [Enter Date] |
+| Update & Delete | v2.0.0 | [Start Date] | [Enter Date] |
+| Security & Bug Fixes | v1.0.0 | [Start Date] | [Enter Date] |
+
+## 🚀 Deployment Guide
+This project supports CI/CD for automated deployment. To deploy, follow these steps:
+1. Push changes to the `prod` branch.
+2. The CI/CD pipeline will handle deployment.
+3. Monitor logs for any issues.
+
+## 🤝 Contribution Guidelines
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a feature branch (`feature-branch-name`).
+3. Commit your changes with descriptive messages.
+4. Open a Pull Request (PR) for review.
+
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).
+
+## 📧 Contact
+For inquiries, reach out via [your.email@example.com](mailto:your.email@example.com).
+
+---
+Developed with ❤️ by [@CHANTHEA22](https://github.com/CHANTHEA22)
