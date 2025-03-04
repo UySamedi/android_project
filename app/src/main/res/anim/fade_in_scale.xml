@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <!-- Initial fade in with slight rotation -->
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="1000"
+        android:startOffset="0" />
+
+    <rotate
+        android:fromDegrees="-15"
+        android:toDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="800"
+        android:startOffset="200" />
+
+    <!-- Enhanced scale animation with overshoot effect -->
+    <scale
+        android:fromXScale="0.7"
+        android:fromYScale="0.7"
+        android:toXScale="1.1"
+        android:toYScale="1.1"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="600"
+        android:startOffset="400" />
+
+    <!-- Settle back to normal size -->
+    <scale
+        android:fromXScale="1.1"
+        android:fromYScale="1.1"
+        android:toXScale="1.0"
+        android:toYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="400"
+        android:startOffset="1000" />
+
+    <!-- Subtle bounce effect -->
+    <translate
+        android:fromYDelta="0"
+        android:toYDelta="-20"
+        android:duration="150"
+        android:startOffset="1400" />
+
+    <translate
+        android:fromYDelta="-20"
+        android:toYDelta="0"
+        android:duration="200"
+        android:startOffset="1550" />
+</set>

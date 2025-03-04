@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base Gradient Layer -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#FF1E3A8A"
+                android:endColor="#FF3B82F6"
+                android:angle="45" />
+        </shape>
+    </item>
+
+    <!-- Curved Overlay 1: Top Left Wave -->
+    <item>
+        <shape>
+            <corners android:topLeftRadius="200dp" />
+            <solid android:color="#22FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Curved Overlay 2: Bottom Right Curve -->
+    <item android:right="0dp" android:top="0dp">
+        <shape>
+            <corners android:bottomRightRadius="250dp" />
+            <solid android:color="#33FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Subtle Noise Texture (Optional) -->
+    <item>
+        <shape>
+            <solid android:color="#05FFFFFF" />
+        </shape>
+    </item>
+
+</layer-list>

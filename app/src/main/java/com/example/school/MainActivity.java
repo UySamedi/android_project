@@ -1,14 +1,18 @@
 package com.example.school;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +27,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        ImageSlider imageSlider = findViewById(R.id.image_slider);
+        ArrayList<SlideModel> slideModels = new ArrayList<>();
 
+        slideModels.add(new SlideModel(R.drawable.img1, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.img2, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.img3, ScaleTypes.FIT));
 
+        // Set the slide models to the ImageSlider
+        imageSlider.setImageList(slideModels);
     }
 }
